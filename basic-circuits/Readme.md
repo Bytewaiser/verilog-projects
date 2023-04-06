@@ -15,7 +15,24 @@ To compile and_gate code:
 
     iverilog -o and_gate.vvp and_gate.v and_gate_tb.v
 
+- This command will create a file called `and_gate.vvp`
+
 ## Creating a wave file
+
+After compilation:
+    
+    vvp [vvp_source_file]
+
+For this example:
+    
+    vvp and_gate.vvp
+
+- This command will create a file called `and_gate.vcd`
+- Then this file can be fed to a wave simulation software like gtkwave
+
+### Note on creating a wave file
+
+To be able to create a wave file using iverilog (Icarus Verilog)
 
 One need to import these lines in the test code:
 
@@ -26,11 +43,5 @@ This example uses:
 
     $dumpfile("and_gate.vcd");
     $dumpvars(0, and_gate_tb);
-
-After compilation:
-    
-    vvp [vvp_source_file]
-
-- vvp_source_file will be created by compiling the source code
 
 ![](and_gate_wave.png)
