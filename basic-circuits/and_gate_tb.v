@@ -5,7 +5,7 @@ module and_gate_tb ();
   and_gate G1 (
       a,
       b,
-      out,
+      out
   );
 
   initial begin
