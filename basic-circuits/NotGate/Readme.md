@@ -1,21 +1,21 @@
-# Or Gate
+# Not Gate
 
-![](or_gate.png)
+![](not_gate.png)
 
 ## Files
-- or_gate.v: Verilog code for or gate
-- or_gate_tb.v: Verilog test case code for or gate
+- not_gate.v: Verilog code for not gate
+- not_gate_tb.v: Verilog test case code for not gate
 
 ## To Compile
 
 Compilation usage of iverilog:
     iverilog -o [output_path] [verilog_source_files]
 
-To compile or_gate code:
+To compile not_gate code:
 
-    iverilog -o or_gate.vvp or_gate.v or_gate_tb.v
+    iverilog -o not_gate.vvp not_gate.v not_gate_tb.v
 
-- This command will create a file called `or_gate.vvp`
+- This command will create a file called `not_gate.vvp`
 
 ## Creating a wave file
 
@@ -25,9 +25,9 @@ After compilation:
 
 For this example:
     
-    vvp or_gate.vvp
+    vvp not_gate.vvp
 
-- This command will create a file called `or_gate.vcd`
+- This command will create a file called `not_gate.vcd`
 - Then this file can be fed to a wave simulation software like gtkwave
 
 ### Note on creating a wave file
@@ -41,7 +41,7 @@ One need to import these lines in the test code:
 
 This example uses:
 
-    $dumpfile("or_gate.vcd");
-    $dumpvars(0, or_gate_tb);
+    $dumpfile("not_gate.vcd");
+    $dumpvars(0, not_gate_tb);
 
-![](or_gate_wave.png)
+![](not_gate_wave.png)
